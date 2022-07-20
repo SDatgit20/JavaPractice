@@ -3,26 +3,25 @@ class TwelveDays {
     String lineNumber[]={"first", "second", "third", "fourth", "fifth", "sixth", "seventh", "eighth", "ninth", "tenth", "eleventh", "twelfth"};
     
     String verse(int verseNumber) {
-        String gen="On the "+lineNumber[verseNumber-1]+" day of Christmas my true love gave to me: ";
+        String generalString="On the "+lineNumber[verseNumber-1]+" day of Christmas my true love gave to me: ";
         if(verseNumber==1)
-            return gen+gift[0]+"."+"\n";
-        //else if(verseNumber>12)
+            return generalString+gift[0]+"."+"\n";
         else
         {
         for(int i=verseNumber-1;i>0;i--){
-            gen+=gift[i]+", ";
+            generalString+=gift[i]+", ";
         }
-        gen+="and "+gift[0]+".";
-            return gen+"\n";
+        generalString+="and "+gift[0]+".";
+            return generalString+"\n";
         }
     }
 
     String verses(int startVerse, int endVerse) {
-        String ans=new String();
+        String songVerses=new String();
        for(int i=startVerse;i<endVerse;i++){
-           ans+=verse(i)+"\n";
+           songVerses+=verse(i)+"\n";
        }
-        ans+=verse(endVerse);
+        songVerses+=verse(endVerse);
         return ans;
     }
     
