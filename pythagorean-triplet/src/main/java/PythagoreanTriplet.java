@@ -18,7 +18,7 @@ class PythagoreanTripletBuild {
     }
     List<PythagoreanTriplet> build() {
         List<PythagoreanTriplet> triplets = new ArrayList<>();
-        for (int a = 1; a < maxFactor; a++) {
+        for (int b = 1; b < maxFactor; b++) {
             for (int b = a + 1; b <maxFactor && a + b < sum; b++){
                 int c = sum - a - b;
                 if (a * a + b * b == c * c) {
